@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("../bckgrnd.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom:300px ;
+  overflow-x: hidden;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+}
+
+ 
+.header-menu-item {
+  margin-right: 40px;
+ 
+
+}
+
+
+.header-menu-item a {
+  
+  text-decoration: none;
+  
+
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 20px 0;
+}
+
+
+.header-nav-menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 0px;
+  padding: 0;
+  margin-top: 20px;
+}
+
+
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: rgb(255, 255, 255)
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+
+}
+
+
+.header-menu-item:hover {
+  transform: scale(1.2);
+  background: transparent;
+  z-index: 2;
+}
+
+footer {
+  background-color: transparent;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.footer-container a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+ 
+
+}
+
+.footer-container a:hover {
+  color: #fff;
+}
+
+.footer-container {
+  translate: 0px 300px;
+  align-items: center;
+}
+
+
+
+.logo-bottom:hover {
+    transform: scale(1.2);
+  background: transparent;
+  z-index: 2;
+ 
+}
+
+
+.logo-stack {
+  position: relative;
+  width: 200px;         
+  height: 200px;        
+  margin: 0 auto;       
+}
+
+.logo-stack img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;         
+  transition: transform 0.3s ease;
+}
+
+.logo-top {
+  z-index: 1;
+  opacity: 1;
+}
+
+.logo-bottom {
+  z-index: 2;
+  opacity: 1;
+  
+}
+
+
+.social-icons {
+    padding: 20px;
+    margin: 0;
+    top: 20px;
+    justify-content: flex-end;
+    display:flex;
+    gap: 20px;
+    z-index: 1000;
+    flex-wrap: wrap;
+    }
+
+ .social-icons i {
+  
+    font-size: 32px;
+    color: beige; 
+    transition: color 0.3s ease;
+    cursor: pointer;
+    }
+
+ .social-icons i:hover {
+    color: #ffffff; 
+    transform: scale(1.2);
+    }
+    .social-icons a{
+      text-decoration: none;
+      color: inherit;
+      display: inline-flex;
+      align-items: center;
+    }
+
+
+
+
+
+
+[type=text], [type=email], [type=tel]{
+   padding: 1.5px;
+   margin: 5px;
+   
+}
+

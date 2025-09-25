@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos</title>
+<link rel="stylesheet" href="./styles/photos.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+ 
+
+  </head>
+
+<body>
+ 
+
+      <header>
+         <section class="social-icons">
+                                    
+<a href="https://music.apple.com/us/artist/parks-and-groves/1769938691" target="_blank">
+  <i class="fab fa-apple"></i>
+</a>
+
+
+
+<a href="https://open.spotify.com/artist/0fHyu1U7lBmUO5SbqtrF0j?si=aHh_qjgxTuOnOl_MG6j3Zw" target="_blank">
+<i class="fab fa-spotify"></i>
+</a>
+
+
+<a href="https://www.instagram.com/parks_and_groves/" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+
+<a href="https://www.facebook.com/p/Parks-Groves-61563384457379/" target="_blank">
+  <i class="fab fa-facebook-f"></i>
+</a>
+
+
+<a href="https://www.youtube.com/@ParksAndGroves" target="_blank">
+<i class="fab fa-youtube"></i>
+</a>
+ 
+  </section>
+
+
+
+
+  <nav class="header-nav">
+    <div class="logo-stack">
+      <img src="./Top LOGO.PNG" class="logo-top" width="200px" alt="Top Logo">
+     <a href="./index.html"> <img src="./logo white.PNG" class="logo-bottom" width="200px" alt="Bottom Logo">
+    
+    </div>
+
+    <ul class="header-nav-menu">
+      <li class="header-menu-item"><a href="./About.html">About</a></li>
+      <li class="header-menu-item"><a href="./Music.html">Music</a></li>
+      <li class="header-menu-item"><a href="./Photos.html">Photos</a></li> 
+      <li class="header-menu-item"><a href="./contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+ 
+
+
+  <div class="carousel">
+    <div class="carousel-track">
+      <div class="carousel-slide">
+        <img src="IMG1.JPG" alt="Slide 1">
+      </div>
+      <div class="carousel-slide">
+        <img src="IMG2.JPG" alt="Slide 2">
+      </div>
+      <div class="carousel-slide">
+        <img src="IMG3.jpeg" alt="Slide 3">
+      </div>
+       <div class="carousel-slide">
+        <img src="IMG4.jpeg" alt="Slide 3">
+      </div> <div class="carousel-slide">
+        <img src="IMG5.jpeg" alt="Slide 3">
+      </div>
+    </div>
+
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const prevButton = document.querySelector('.carousel-btn.prev');
+    const nextButton = document.querySelector('.carousel-btn.next');
+    let currentSlide = 0;
+
+    function updateSlidePosition() {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${slideWidth * currentSlide}px)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+      currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
+      updateSlidePosition();
+    });
+
+    nextButton.addEventListener('click', () => {
+      currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
+      updateSlidePosition();
+    });
+
+    window.addEventListener('resize', updateSlidePosition);
+  </script>
+
+
+</body>
+  <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Parks&Groves. All rights reserved.</p>
+            <nav class="fnav">
+              <a href="#">Privacy Policy</a> |
+              <a href="#">Terms of Use</a> |
+              <a href="#">Contact</a>
+            </nav>
+          </div> 
+      </footer>
+</html>
